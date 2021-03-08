@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Button-->
+        <scene sceneID="KEo-5j-adI">
+            <objects>
+                <controller identifier="Button" id="ehj-NJ-rci" customClass="ButtonInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="pIG-8b-7xT">
+                            <connections>
+                                <action selector="buttonAction" destination="ehj-NJ-rci" id="s9Q-J6-eUN"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Custom1" id="nbL-Z8-YnR">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </button>
+                        <button width="1" alignment="left" title="Custom2" id="ire-8M-mch"/>
+                        <button alignment="left" id="82r-TC-39E">
+                            <group key="contentGroup" width="1" height="44" alignment="left" spacing="8" id="fZS-Tk-bFP">
+                                <items>
+                                    <imageView width="24" height="24" alignment="left" verticalAlignment="center" image="square.and.arrow.up" catalog="system" id="WLa-Bw-Uf1"/>
+                                    <label alignment="center" verticalAlignment="center" text="Custom3" id="dko-xC-Jbb"/>
+                                    <imageView width="24" height="24" alignment="right" verticalAlignment="center" image="square.and.arrow.up" catalog="system" id="Cwb-PL-IJ4"/>
+                                </items>
+                            </group>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="pIG-8b-7xT" id="noP-gp-cMx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="-45"/>
+        </scene>
+        <!--TextField-->
+        <scene sceneID="KEt-IR-PyG">
+            <objects>
+                <controller identifier="TextField" id="Txb-hZ-w2f" customClass="TextFieldInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <textField width="1" alignment="left" placeholder="Input Here" id="mZQ-MK-p7j">
+                            <connections>
+                                <action selector="textFieldAction:" destination="Txb-hZ-w2f" id="tyT-DD-kfb"/>
+                            </connections>
+                        </textField>
+                        <label alignment="left" hidden="YES" text="Label" id="pDl-q5-kGS"/>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="pDl-q5-kGS" id="2Dm-lX-PWr"/>
+                        <outlet property="textField" destination="mZQ-MK-p7j" id="xxu-Ef-QG9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="651" y="-45"/>
+        </scene>
+        <!--Switch-->
+        <scene sceneID="Mir-Ug-NYT">
+            <objects>
+                <controller identifier="Switch" id="wej-4u-PC0" customClass="SwitchInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="NsA-7E-2aU">
+                            <connections>
+                                <action selector="switchAction:" destination="wej-4u-PC0" id="BlP-o0-s4U"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="aSwitch" destination="NsA-7E-2aU" id="XMH-uZ-YkE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="944" y="-45"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="Y06-Sv-ahi">
+            <objects>
+                <controller identifier="Picker" id="kuE-ZH-f6J" customClass="PickerInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="gRD-ZI-eX5">
+                            <items>
+                                <label alignment="left" text="Label" id="EZQ-A7-CM7"/>
+                                <picker height="100" alignment="left" id="nb1-2M-fNn">
+                                    <connections>
+                                        <action selector="picker1Action:" destination="kuE-ZH-f6J" id="CbW-IJ-p9v"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="B57-on-XAe"/>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="kwu-og-73f">
+                            <items>
+                                <label alignment="left" text="Label" id="F0D-DO-DUm"/>
+                                <picker height="100" alignment="left" id="teT-ll-0lP">
+                                    <connections>
+                                        <action selector="picker2Action:" destination="kuE-ZH-f6J" id="zYd-Rt-d8a"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="gsm-zF-aj3"/>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="Tpn-aK-1mf">
+                            <items>
+                                <label alignment="left" text="Label" id="1F7-YU-Dkv"/>
+                                <picker height="100" alignment="left" id="Lw3-OD-OnN">
+                                    <connections>
+                                        <action selector="picker3Action:" destination="kuE-ZH-f6J" id="DyO-sr-OMP"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="picker1" destination="nb1-2M-fNn" id="sKk-xW-c9q"/>
+                        <outlet property="picker1Label" destination="EZQ-A7-CM7" id="xTl-SA-XPm"/>
+                        <outlet property="picker2" destination="teT-ll-0lP" id="WZF-3B-vda"/>
+                        <outlet property="picker2Label" destination="F0D-DO-DUm" id="Mrg-Mf-ra1"/>
+                        <outlet property="picker3" destination="Lw3-OD-OnN" id="71s-0N-jPW"/>
+                        <outlet property="picker3Label" destination="1F7-YU-Dkv" id="gtD-1p-oC3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1512" y="-45"/>
+        </scene>
+        <!--Date-->
+        <scene sceneID="W7j-f3-jJV">
+            <objects>
+                <controller identifier="Date" id="VWi-Qs-ro9" customClass="DateInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <dateLabel alignment="left" id="eKJ-ly-ief">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <dateLabel alignment="left" id="yvz-03-iDy">
+                            <dateFormatterStyle key="dateStyle" full="YES"/>
+                            <dateFormatterStyle key="timeStyle" full="YES"/>
+                        </dateLabel>
+                        <dateLabel alignment="left" id="22m-Kq-pBE">
+                            <dateFormatterStyle key="dateStyle" short="YES" medium="YES" long="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES" medium="YES" long="YES"/>
+                        </dateLabel>
+                        <dateLabel alignment="left" id="LSk-dY-C4E"/>
+                        <dateLabel alignment="left" id="jdq-eT-NmH">
+                            <dateFormatterStyle key="dateStyle" medium="YES"/>
+                            <dateFormatterStyle key="timeStyle" medium="YES"/>
+                        </dateLabel>
+                    </items>
+                    <connections>
+                        <outlet property="date" destination="eKJ-ly-ief" id="omx-Ha-Mbl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="656" y="331"/>
+        </scene>
+        <!--Movie-->
+        <scene sceneID="Joh-aj-ayV">
+            <objects>
+                <controller identifier="Movie" id="YdT-Lb-Xzg" customClass="MovieInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <movie width="1" height="1" alignment="left" posterImage="sample" id="mFG-WP-cia"/>
+                    </items>
+                    <connections>
+                        <outlet property="movie" destination="mFG-WP-cia" id="d7Y-Ca-eX7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1520" y="721"/>
+        </scene>
+        <!--InlineMovie-->
+        <scene sceneID="jlL-zg-WEX">
+            <objects>
+                <controller identifier="InlineMovie" id="0X5-sg-qI3" customClass="InlineMovieInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <inlineMovie width="1" height="100" alignment="left" posterImage="sample" id="9d2-qm-Vpi"/>
+                    </items>
+                    <connections>
+                        <outlet property="inlineMovie" destination="9d2-qm-Vpi" id="drT-V9-cYQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="1127"/>
+        </scene>
+        <!--NowPlayingView-->
+        <scene sceneID="oxW-Vu-YrL">
+            <objects>
+                <controller identifier="NowPlayingView" id="59A-DP-Z1E" customClass="NowPlayingViewInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <nowPlayingView alignment="left" id="Dzg-Xm-uQO"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="680" y="1108"/>
+        </scene>
+        <!--Gestures-->
+        <scene sceneID="kyZ-Wp-uQl">
+            <objects>
+                <controller identifier="Gestures" id="Yzb-bO-TW5" customClass="GesturesInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="aOT-Tb-ex0">
+                            <items>
+                                <label alignment="left" text="Tap" id="OIT-vQ-Rrf"/>
+                                <label alignment="right" text="1" id="Os8-i9-gf0"/>
+                            </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="4uF-0M-yhI">
+                                    <connections>
+                                        <action selector="handleTap:" destination="Yzb-bO-TW5" id="TLD-dn-ThT"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                        <group width="1" alignment="left" id="If3-7N-OGf">
+                            <items>
+                                <label alignment="left" text="Swipe" id="Ycw-wm-uSw"/>
+                                <label alignment="right" text="1" id="PxD-v6-QGo"/>
+                            </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="mcl-SQ-mRT">
+                                    <connections>
+                                        <action selector="handleSwipe:" destination="Yzb-bO-TW5" id="Jf7-fk-n5f"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                        <group width="1" alignment="left" id="x7I-6o-gVU">
+                            <items>
+                                <label alignment="left" text="LongPress" id="EbX-h2-6Mn"/>
+                                <label alignment="right" text="1" id="pGG-jg-Sdr"/>
+                            </items>
+                            <gestureRecognizers>
+                                <longPressGestureRecognizer id="Y4g-EV-aWa">
+                                    <connections>
+                                        <action selector="handleLongPress:" destination="Yzb-bO-TW5" id="SPT-Da-gvQ"/>
+                                    </connections>
+                                </longPressGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                        <group width="1" alignment="left" id="GhE-5p-T9b">
+                            <items>
+                                <label alignment="left" text="Pan" id="8TI-40-2b1"/>
+                                <label alignment="right" text="1" id="E70-4d-5Y4"/>
+                            </items>
+                            <gestureRecognizers>
+                                <panGestureRecognizer id="OkM-c4-aCp">
+                                    <connections>
+                                        <action selector="handlePan:" destination="Yzb-bO-TW5" id="a0q-77-5yW"/>
+                                    </connections>
+                                </panGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="longPressGesture" destination="Y4g-EV-aWa" id="52S-Sk-HBL"/>
+                        <outlet property="longPressLabel" destination="pGG-jg-Sdr" id="tSP-ce-ut3"/>
+                        <outlet property="panGesture" destination="OkM-c4-aCp" id="Xkg-vw-KcB"/>
+                        <outlet property="panLabel" destination="E70-4d-5Y4" id="uMF-ma-v8a"/>
+                        <outlet property="swipeGesture" destination="mcl-SQ-mRT" id="AUh-eD-FgC"/>
+                        <outlet property="swipeLabel" destination="PxD-v6-QGo" id="cpL-eo-Z2t"/>
+                        <outlet property="tapGesture" destination="4uF-0M-yhI" id="S51-SB-voC"/>
+                        <outlet property="tapLabel" destination="Os8-i9-gf0" id="9Zd-dt-w41"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1299" y="1108"/>
+        </scene>
+        <!--VolumeControl-->
+        <scene sceneID="Tjt-9h-CQu">
+            <objects>
+                <controller identifier="VolumeControl" id="le2-hj-9nB" customClass="VolumeControlInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <volumeControlView alignment="center" verticalAlignment="center" controlsLocalVolume="NO" id="uJm-xc-njA"/>
+                    </items>
+                    <connections>
+                        <outlet property="volumeControl" destination="uJm-xc-njA" id="UJq-TA-lzY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="996" y="1108"/>
+        </scene>
+        <!--Group-->
+        <scene sceneID="FLq-Xy-eaK">
+            <objects>
+                <controller identifier="Group" id="0bG-V1-i9H" customClass="GroupInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" radius="32" spacing="16" id="4ff-KK-HoV">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" id="dGP-bM-0JJ">
+                                    <items>
+                                        <button width="0.29999999999999999" alignment="left" title="A" id="j1j-2d-efM">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                        <button width="0.29999999999999999" alignment="center" title="B" id="8qP-nj-Wmd">
+                                            <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                        <button width="0.29999999999999999" alignment="right" title="C" id="T6u-nB-NJK">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                    </items>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="center" id="Ggk-1C-R0V">
+                                    <items>
+                                        <button width="0.29999999999999999" alignment="left" title="A" id="MQe-gF-Wrw">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                        <button width="0.29999999999999999" alignment="center" title="B" id="8ma-mj-xU9">
+                                            <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                        <button width="0.29999999999999999" alignment="right" title="C" id="CWk-gP-BnS">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                    </items>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="group" destination="Ggk-1C-R0V" id="1Nq-SX-CdS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1232" y="331"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="FYb-Ft-6dy">
+            <objects>
+                <controller identifier="Map" id="2fF-fu-x03" customClass="MapInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <map width="1" height="1" alignment="left" id="xBh-yk-h72"/>
+                    </items>
+                    <connections>
+                        <outlet property="map" destination="xBh-yk-h72" id="zry-69-lfs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1232" y="721"/>
+        </scene>
+        <!--Separator-->
+        <scene sceneID="ALB-DC-2dO">
+            <objects>
+                <controller identifier="Separator" id="H2e-2X-rhL" customClass="SeparatorInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <separator alignment="left" id="aHt-g6-sjY"/>
+                        <separator alignment="left" id="cjM-h6-u7L">
+                            <color key="color" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <separator alignment="left" id="clf-EQ-1Xk">
+                            <color key="color" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <separator alignment="left" id="vAp-HX-Xem">
+                            <color key="color" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                    </items>
+                    <connections>
+                        <outlet property="separator" destination="aHt-g6-sjY" id="x9B-VR-h5n"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="651" y="721"/>
+        </scene>
+        <!--ActivityRing-->
+        <scene sceneID="nZo-0o-Qcv">
+            <objects>
+                <controller identifier="ActivityRing" id="2zR-xQ-ccP" customClass="ActivityRingInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <activity alignment="left" id="pYf-ZB-y8j"/>
+                    </items>
+                    <connections>
+                        <outlet property="activityRing" destination="pYf-ZB-y8j" id="uop-pu-FUj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="944" y="721"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="xlC-0B-eRZ">
+            <objects>
+                <controller identifier="Table" id="UFX-oI-mN5" customClass="TableInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <button width="32" height="32" alignment="right" backgroundImage="plus.circle.fill" catalog="system" id="nLR-P5-Nqd">
+                            <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="buttonAction" destination="UFX-oI-mN5" id="lWD-NZ-FBt"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="Ppf-YM-gKC">
+                            <items>
+                                <tableRow identifier="Row" id="Nnn-QH-2Fp" customClass="TableRowController" customModule="SampleWatchKit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" spacing="16" id="2Ge-SU-T3b">
+                                        <items>
+                                            <button width="32" height="32" alignment="left" verticalAlignment="center" backgroundImage="minus.circle.fill" catalog="system" id="8SK-F7-nvh">
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="buttonAction" destination="Nnn-QH-2Fp" id="7b4-Uc-XHJ"/>
+                                                </connections>
+                                            </button>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="SGH-ne-VjM"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="SGH-ne-VjM" id="dsv-UQ-Ej8"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Ppf-YM-gKC" id="nJe-7r-HjL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1520" y="331"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="QHu-fr-3Za">
+            <objects>
+                <controller identifier="Image" id="h40-L6-VkQ" customClass="ImageInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" image="pencil.circle.fill" catalog="system" animationDuration="3" id="u9h-V0-LgN"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="721"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="NNU-iR-oOx">
+            <objects>
+                <controller identifier="Timer" id="Saa-UI-Pqs" customClass="TimerInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <timer alignment="center" verticalAlignment="center" enabled="YES" id="9HM-UW-juC"/>
+                    </items>
+                    <connections>
+                        <outlet property="timer" destination="9HM-UW-juC" id="lxD-fU-BVF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="944" y="331"/>
+        </scene>
+        <!--Label-->
+        <scene sceneID="mha-UJ-B1D">
+            <objects>
+                <controller identifier="Label" id="9mR-fI-ZsD" customClass="LabelInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="XFe-oe-8Dl"/>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="XFe-oe-8Dl" id="GL7-wc-bln"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="331"/>
+        </scene>
+        <!--Slider-->
+        <scene sceneID="pYt-KL-8HQ">
+            <objects>
+                <controller identifier="Slider" id="4ao-5o-MrI" customClass="SliderInterfaceController" customModule="SampleWatchKit_WatchKit_Extension">
+                    <items>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="rcf-qe-7X9">
+                            <connections>
+                                <action selector="sliderAction:" destination="4ao-5o-MrI" id="OtY-1h-fa8"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="slider" destination="rcf-qe-7X9" id="aWc-KA-5bm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1232" y="-45"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SampleWatchKit_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="Chx-nY-KY1">
+                            <items>
+                                <tableRow identifier="Row" id="dJ1-jy-5pp" customClass="MenuRowController" customModule="SampleWatchKit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="fO1-r0-wOE">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="g8K-vn-ysx"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="g8K-vn-ysx" id="cej-1A-ZUc"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Chx-nY-KY1" id="V2V-JW-6O8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-12" y="356"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-282" y="1019"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="SampleWatchKit_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="1019"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="SampleWatchKit_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="721"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="sample" width="160" height="73"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
